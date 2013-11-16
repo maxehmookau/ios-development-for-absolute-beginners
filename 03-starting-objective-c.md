@@ -142,6 +142,16 @@ These are **bad** names for variables:
 
 > Noticed the `*` next to the variable? This is called a pointer. Don't worry about this yet, just remember the rule that most variables you create will be prefixed with an asterisk. You need it when you create a variable, but not when you're using it. Study the example carefully, variables and pointers are *really* important.
 
+## Working with Numbers
+
+So far we have only worked with `NSString` and they're quite inflexible. They just represent words. What if we want to perform some mathematical process? Adding, subtracting... that sort of thing.
+
+Try this:
+
+    NSLog(@"%i", 4 + 100);
+
+This line adds the numbers `4` and `100` and outputs the result `104`. Try it now.
+
 ### Activities
 
 1. Try changing the text that is output and running the application again.
