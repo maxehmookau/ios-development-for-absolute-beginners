@@ -40,3 +40,30 @@ Now we have two arrays, `firstNames` and `surnames`. We can use `NSLog()` to out
     NSLog(@"%@ %@", firstNames[0], surnames[3]);
 
 Should output the name `Max Jones` to the console.
+
+**Activities** 
+
+1. Extend the `firstNames` and `surnames` example to output all of the names using a loop as seen in chapter 4.
+
+# Dictionaries
+
+Firstly, the name `dictionary` can really help you understand what one is. A dictionary (or `NSDictionary` in Objective-C) is a simple `key-value store`. Dictionaries represent data like this:
+
+    person:
+      name: 'Max'
+      dateOfBirth: '23rd April'
+      postcode: 'CF14 3YS'
+
+In terms of a dictionary, think of `name` as a word in a dictionary and `Max` as a definition. In Objective-C we can write this:
+
+	NSDictionary *person = @{ @"Name": @"Max",
+                              @"dateOfBirth": @"23rd April",
+                              @"postcode": @"CF14 3YS" };
+
+> Note the use of `{ }` for dictionaries and `[ ]` for arrays.
+
+We can then look at any definition (or `key`) in our dictionary by asking the variable for the word (`variable`), just like this:
+
+    NSLog(person[@"Name"]);
+
+This will look up `Name` in our dictionary and give the definition back. **Try outputting my date of birth and postcode now.**
