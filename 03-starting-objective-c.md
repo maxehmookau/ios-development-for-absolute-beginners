@@ -152,11 +152,17 @@ Try this:
 
 This line adds the numbers `4` and `100` and outputs the result `104`. Try it now.
 
-*But what's this `@"%i"` thing?* I hear you ask. When you're not working with `NSString`, `NSLog` needs to know what kind of data to expect. In this case, an `integer`. You can chain these together, so if you wanted to output two different integers:
+*But what's this `@"%i"` thing?* I hear you ask. When you're not working with `NSString`, `NSLog` needs to know what kind of data to expect. In this case, an `integer`, represented using `%i`. You can chain these together, so if you wanted to output two different integers:
 
     NSLog(@"%i %i", 10 + 10, 100 + 50);
 
 Would output: `20 150`.
+
+`NSLog` will accept any number of different things to output. You can even add an `NSString` to the list like this...
+
+    NSLog(@"%i %i %@", 10 + 10, 100 + 50, @"Hello");
+
+...would output `20 150 Hello`. Try it now!
 
 ### Activities
 
@@ -164,6 +170,6 @@ Would output: `20 150`.
 2. Change the code so that it outputs several things.
 3. Create several variables and output them.
 4. Output 5 numbers using 5 different sums but only **one** `NSLog` statement.
-5. Change the numbers example to use variables to store the numbers and then output those. (This is tricky...)
+5. Change the numbers example to use variables to store the numbers and then output those. (This is tricky... Try using `int` as the class.)
 
 
