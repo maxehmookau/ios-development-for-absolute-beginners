@@ -56,7 +56,7 @@ Firstly, the name `dictionary` can really help you understand what one is. A dic
 
 In terms of a dictionary, think of `name` as a word in a dictionary and `Max` as a definition. In Objective-C we can write this:
 
-	NSDictionary *person = @{ @"Name": @"Max",
+    NSDictionary *person = @{ @"Name": @"Max",
                               @"dateOfBirth": @"23rd April",
                               @"postcode": @"CF14 3YS" };
 
@@ -67,3 +67,26 @@ We can then look at any definition (or `key`) in our dictionary by asking the va
     NSLog(person[@"Name"]);
 
 This will look up `Name` in our dictionary and give the definition back. **Try outputting my date of birth and postcode now.**
+
+## Combining Dictionaries and Arrays
+
+This is where things start to get tricky. We can store a list of `NSDictionaries` inside an `NSArray`. We could create a simple address book using this:
+
+    NSDictionary *person1 = @{ @"Name": @"Max",
+                               @"dateOfBirth": @"23rd April",
+                               @"postcode": @"CF14 3YS" };
+
+    NSDictionary *person2 = @{ @"Name": @"Steve",
+                               @"dateOfBirth": @"11th May",
+                               @"postcode": @"B30 1AA" };
+
+    NSArray *addressBook = @[person1, person2];
+
+`addressBook` now contains two `NSDictionary` objects that contain different people.
+
+**Activities**
+
+1. Add another person to the address book.
+2. Use `NSLog` to output someone's name to the console.
+3. Use a loop to output everyone's date of birth to the console.
+4. Use `NSLog` to output this sentence `This person's name is Max, his birthday is the 23rd April and his postcode is CF14 3YS.` for each person in the address book. **Use a loop for bonus points.**
